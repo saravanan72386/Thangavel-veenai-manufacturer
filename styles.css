@@ -332,7 +332,7 @@ html, body {
   min-height: 100vh;
   overflow: hidden;
   color: #fff;
-  margin-top: 450px;
+  margin-top: 500px;
 }
 .product-cards button{
   background-color: #ffcc00;
@@ -446,13 +446,6 @@ html, body {
   text-align: center;
 }
 
-/* 🖥️ Desktop (≥1025px) */
-@media (min-width: 1025px) {
-  .product-cards {
-    flex-wrap: nowrap;
-  }
-}
-
 /* 💻 Tablet (769px–1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
   .product-cards {
@@ -471,18 +464,21 @@ html, body {
   }
 }
 
-/* 📱 Mobile (≤768px) — Now shown in a row */
+/* 📱 Mobile (≤768px) — 2 rows × 2 columns layout */
 @media (max-width: 768px) {
   .product-cards {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    justify-items: center;
+    align-items: start;
+    padding: 20px;
+  
   }
 
   .card {
-    width: 45%;
-    height: 300px;
+    width: 100%;
+    height: 250px;
   }
 
   .text-overlay h4 {
@@ -498,17 +494,16 @@ html, body {
   }
 }
 
-/* 📱 Extra Small Phones (≤480px) */
+/* 📱 Extra Small Phones (≤480px) — still 2×2 grid */
 @media (max-width: 480px) {
   .product-cards {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .card {
-    width: 90%;
-    height: 250px;
+    width: 100%;
+    height: 220px;
   }
 
   .text-overlay h4 {
@@ -524,6 +519,7 @@ html, body {
   }
 }
 
+
 /* 🎯 Service Section (Desktop/Laptop Default) */
 .service-section {
   display: flex;
@@ -536,7 +532,7 @@ html, body {
   min-height: 100vh; /* ✅ Better than fixed height */
   background: linear-gradient(135deg, #000000 0%, #04022c 100%);
   position: relative;
-  margin-top: 50px;
+  margin-top: 70px;
   animation: fadeInUp 1.5s ease-out;
   z-index: 1;
 }
@@ -629,33 +625,36 @@ html, body {
 }
 
 /* 📱 Mobile View (max-width: 767px) */
+/* 📱 Mobile View (max-width: 767px) — 2×2 Grid for Services */
 @media (max-width: 767px) {
   .service-section {
-    display: grid;
-    grid-template-columns: 2fr;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     justify-items: center;
-    align-items: start;
-    gap: 25px;
-    padding: 30px 15px;
-    min-height: auto; /* ✅ Prevents overflow */
-  }
-
-  .services-title {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
+    align-items: stretch;
+    padding: 25px 15px;
   }
 
   .card4 {
-    width: 90%;
-    max-width: 360px;
-    padding: 25px 18px;
-    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 20px 15px;
+    box-sizing: border-box;
   }
+
+  .services-title {
+    grid-column: span 2; /* Make title take full width */
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+}
 
   html, body {
     overflow-x: hidden; /* ✅ Prevents horizontal scroll */
   }
-}
+
 
 /* 🌟 Reviews Section */
 .reviews-section {
@@ -768,161 +767,161 @@ html, body {
 }
 
 /* 📱 Responsive */
+/* 📱 Mobile View (max-width: 768px) — Stable 2×2 Grid for Reviews */
 @media (max-width: 768px) {
   .reviews-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px; /* adds space between cards */
-    padding: 20px 5%;
-    text-align: center;
+    display: grid !important;                 /* Force grid layout */
+    grid-template-columns: repeat(2, 1fr);    /* Two columns */
+    gap: 20px;                                /* Spacing between cards */
+    justify-items: center;
+    align-items: start;
+    padding: 20px;
   }
 
   .card5 {
-    width: 90%;
-    max-width: 400px; /* prevents stretching on bigger mobiles */
-    margin: 0 auto;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    padding: 15px;
+    margin: 0;
+    box-sizing: border-box;
   }
 
   .card5 p {
     font-size: 0.95rem;
     line-height: 1.5;
   }
+
+  .reviews-title {
+    grid-column: span 2;   /* Title spans full width */
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
 }
 
 html{
   scroll-behavior: smooth;
 }
-.contact-location-section {
-  background: url('./bigtemple') center/cover no-repeat;
-  padding: 80px 50px;
+.contact-section {
   position: relative;
-  color: rgb(255, 255, 255);
-  height: 80vh;
-  font-family: 'Poppins', sans-serif;
+  background: url('./bg-temple.jpg') center/cover no-repeat; /* replace with your background */
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
 }
 
-/* 🌐 Grid Layout */
-.contact-grid {
+/* Overlay for dim effect */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.contact-container {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 50px;
-  margin-left: -50px;
-  margin-top: 100px;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
-/* 🗺️ Map Styling */
+/* Map */
 .map-container {
   flex: 1;
-  min-width: 320px;
-  max-width: 600px;
-  animation: slideInLeft 1.5s ease forwards;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
 }
 
 .map-container iframe {
   width: 100%;
   height: 350px;
   border: none;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
 }
 
-/* 📞 Contact Info Styling */
+/* Contact Info Card */
 .contact-info {
   flex: 1;
-  min-width: 320px;
+  min-width: 300px;
   max-width: 500px;
-  background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  padding: 35px 30px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-  animation: slideInRight 1.5s ease forwards;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 40px 30px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .contact-info h2 {
   font-size: 2rem;
-  margin-bottom: 15px;
-  color: #5f5d5d;
-  text-align: center;
-  position: relative;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-.contact-info h2::after {
-  content: "";
-  display: block;
+.contact-info span {
+  color: #ffcc00;
+}
+
+.divider {
   width: 60px;
   height: 3px;
-  background: #00aaff;
-  margin: 10px auto 0;
-  border-radius: 3px;
+  background: #ffcc00;
+  margin: 10px auto 20px;
+  border-radius: 10px;
 }
 
 .contact-info p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #5f5e5e;
-  margin: 15px 0;
+  margin: 15px 0 5px;
+  font-weight: 500;
 }
 
-/* 🌐 Social Icons */
+.contact-info a {
+  color: #ffcc00;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #fff;
+}
 .social-icons {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 20px;
 }
 
 .social-icons a {
-  font-size: 1.8rem;
-  color: white;
-  transition: all 0.3s ease;
+  color: #ffcc00;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.social-icons a.whatsapp:hover {
-  color: #25d366;
+.social-icons a:hover {
+  color: #fff;
   transform: scale(1.2);
+  text-shadow: 0 0 10px #ffcc00;
 }
-
-.social-icons a.instagram:hover {
-  color: #e1306c;
-  transform: scale(1.2);
-}
-
-/* ✨ Animations */
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* 📱 Mobile Responsive */
+/* 📱 Responsive */
 @media (max-width: 768px) {
-  .contact-grid {
+  .contact-section {
+    padding: 60px 15px;
+  }
+
+  .contact-container {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    padding: 20px;
-    margin-left: -65px;
   }
 
   .map-container iframe {
@@ -930,7 +929,14 @@ html{
   }
 
   .contact-info {
-    width: 75%;
-    text-align: center;
+    width: 90%;
+    padding: 30px 20px;
+  }
+  .social-icons {
+    margin-top: 20px;
+    gap: 15px;
+  }
+  .social-icons a {
+    font-size: 1.4rem;
   }
 }
