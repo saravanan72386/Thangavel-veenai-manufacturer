@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thangavel Veenai</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+</head>
+<body>
+  <!-- 🟡 Navbar -->
+  <header class="navbar">
+    <div class="logo">TVM Veena Works</div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-icon" id="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Nav Links -->
+   <ul class="navlinks" id="navlinks">
+  <li><a href="#home">Home</a></li>
+  <li><a href="about.html" class="active">About</a></li>
+  <li><a href="#product">Product</a></li>
+  <li><a href="#services">Services</a></li>
+   <li><a href="#reviews">Reviews</a></li>
+  <li><a href="#location">Location</a></li>
+</ul>
+  </header>
+  
+  <!-- 🟢 JavaScript for menu toggle -->
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('navlinks');
+    const navItems = navLinks.querySelectorAll('a');
+
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuIcon.classList.toggle('open');
+    });
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuIcon.classList.remove('open');
+      });
+    });
+
+  </script>
+
+  <!-- 🏠 Home Section -->
+  <section id="home">
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide" style="background-image: url('./temple1');"></div>
+        <div class="slide" style="background-image: url('./temple2');"></div>
+        <div class="slide" style="background-image: url('./temple4');"></div>
+        <div class="slide" style="background-image: url('./temple3');"></div>
+        <div class="slide" style="background-image: url('./ganesha');"></div>
+        <div class="slide" style="background-image: url('./statue');"></div>
+        <div class="slide" style="background-image: url('./chakra');"></div>
+        <div class="slide" style="background-image: url('./red guitar');"></div>
+      </div>
+    </div>
+
+    <div class="words">
+      <h2>Thangavel Veenai Manufacturer</h2>
+    </div>
+    <div class="words2">
+      <p>From the temple town of Thanjavur, this veenai echoes the spirit of Saraswati in every note.</p>
+    </div>
+    <div class="box">
+      <a href="about.html" class="read-more-btn">Learn More</a>
+    </div>
+  </section>
+</section>
+
+  <section class="product" id="product">
+  <img src="./string image" alt="Musical Instrument" class="bg-image" />
+
+  <div class="product-content">
+    <div class="text-overlay">
+      <h4>Our Product</h4>
+      <p>
+        Explore our exquisite range of instruments and enriching music craftsmanship.
+        From traditional to contemporary, we offer the tools and guidance to perfect your art.
+      </p>
+      <a href="joint-veena.html" class="product-cards"><button>Explore the Veena's</button></a>
+    </div>
+
+    <!-- 🟢 Product Cards Row -->
+    <div class="product-cards">
+      <div class="card">
+        <img src="./v4.jpg" alt="Instrument Card" />
+        <div class="card-overlay">
+          <h4>Joint Sheet Veena</h4>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./v8.webp" alt="Instrument Card" />
+        <div class="card-overlay">
+          <h4>Full Deep Eakandam Veena</h4>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./v13" alt="Instrument Card" />
+        <div class="card-overlay">
+          <h4>Lite Carving Veena</h4>
+        </div>
+      </div>
+       <div class="card">
+        <img src="./tam5" alt="Instrument Card" />
+        <div class="card-overlay">
+          <h4>Tambura</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- 🔵 Services Section -->
+  <section class="service-section" id="services">
+  <h2 class="services-title">Our Services</h2>
+    <div class="card4">
+      <h5>Repolishing</h5>
+      <p>Give your old veena a new shine with our expert repolishing service.</p>
+    </div>
+
+    <div class="card4">
+      <h5>Repairing</h5>
+      <p>We restore damaged instruments with precision and care.</p>
+    </div>
+
+    <div class="card4">
+      <h5>Tuning</h5>
+      <p>Professional tuning for the perfect resonance and clarity.</p>
+    </div>
+
+    <div class="card4">
+    <h5>Customization</h5>
+    <p>Create your dream veena with personalized wood, color, and design options.</p>
+  </div>
+
+  <div class="card4">
+    <h5>String Replacement</h5>
+    <p>High-quality string fitting to maintain tone and durability.</p>
+  </div>
+
+  <div class="card4">
+    <h5>Pickup Installation</h5>
+    <p>Enhance your instrument’s sound with professional pickup installation.</p>
+  </div>
+  </section>
+
+  <!-- ⭐ Reviews Section -->
+  <section class="reviews-section" id="reviews">
+  <h2 class="review-title">Google Reviews</h2>
+
+    <div class="reviews-container">
+      <div class="card5">
+        <h5>⭐️⭐️⭐️⭐️⭐️</h5>
+        <p>“Very friendly Appa amma and Annan.definetly damn sure without doubt anyone want veena can contact them.loves their hospitality and attention.you can trust them and buy veena without searching other options.”</p>
+        <span>- Sona Rani</span>
+      </div>
+
+      <div class="card5">
+        <h5>⭐️⭐️⭐️⭐️⭐️</h5>
+        <p>“I appreciate his dedication and hard work, such a great place to order Hindu goddess Saraswati in Thanjavur...”</p>
+        <span>- Arun Prasad</span>
+      </div>
+
+      <div class="card5">
+        <h5>⭐️⭐️⭐️⭐️⭐️</h5>
+        <p>“Gives best quality veena for affordable price.”</p>
+        <span>- Gopi Prithish</span>
+      </div>
+
+      <div class="card5">
+      <div class="stars">⭐⭐⭐⭐</div>
+      <p>“Excellent craftsmanship! The sound quality and finish are truly outstanding.”</p>
+      <span>- Rithik</span>
+    </div>
+
+    <div class="card5">
+      <div class="stars">⭐⭐⭐⭐</div>
+      <p>“Got my veena repaired here, and it sounds brand new! Highly recommended service.”</p>
+      <span>- Surendhar</span>
+    </div>
+
+    <div class="card5">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>“Beautiful veena designs and very kind customer service. Loved the experience.”</p>
+      <span>- Maruthu</span>
+    </div>
+
+    <div class="card5">
+      <div class="stars">⭐⭐⭐⭐</div>
+      <p>“I purchased my first veena here — the tone is perfect and the design is elegant!”</p>
+      <span>- Swetha</span>
+    </div>
+  </section>
+  
+<section id="location" class="contact-location-section">
+  <div class="contact-grid">
+    
+    <!-- 🗺️ Map Section -->
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2821894451404!2d79.12895767961348!3d10.789685761925096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baac7603efc0449%3A0xe0023f3169e91e4e!2sEllaiamman%20Kovil%20St%2C%20Rajakrisnapuram%2C%20Thanjavur%2C%20Tamil%20Nadu%20613009!5e0!3m2!1sen!2sin!4v1761648168951!5m2!1sen!2sin"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <!-- 📞 Contact Information -->
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p><strong>Email:</strong><br>
+        thangavelsaravanan386@gmail.com<br>
+        thangavelvenkatesh@gmail.com
+      </p>
+      <p><strong>Phone:</strong><br>
+        +91 93606 28386 | 80723 97918 | 82489 18314
+      </p>
+
+      <div class="social-icons">
+        <a href="https://wa.me/919360628386" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME" class="instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

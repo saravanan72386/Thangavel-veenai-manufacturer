@@ -1,0 +1,294 @@
+<style>
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #000;
+  color: white;
+  text-align: center;
+}
+
+/* Hero Section */
+.product-hero {
+  background: url('./bg-veena.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.product-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.product-hero h1,
+.product-hero p {
+  position: relative;
+  z-index: 2;
+}
+
+.product-hero h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, gold, rgb(255, 248, 216), gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 200% center; }
+  100% { background-position: 0% center; }
+}
+
+/* Gallery Section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  margin-top: -100px;
+}
+
+.image-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.image-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.6);
+}
+
+/* Hover Overlay Name */
+.overlay {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: gold;
+  font-weight: 600;
+  padding: 15px 0;
+  transition: bottom 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  border-top: 2px solid gold;
+}
+
+.image-card:hover .overlay {
+  bottom: 0;
+  opacity: 1;
+}
+
+/* Description */
+.description {
+  max-width: 950px;
+  margin: auto;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+/* Back Button */
+.product-cards button {
+  display: inline-block;
+  margin-bottom: 40px;
+  background: gold;
+  color: black;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.product-cards button:hover {
+  background: #f1c40f;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+.gallery2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+}
+
+/* 🟡 Image card base */
+.image-card2 {
+  position: relative;
+  width: 220px;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.image-card2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.6s ease, filter 0.4s ease;
+}
+
+/* ✨ Hover: enlarge smoothly but stay in place */
+.image-card2:hover {
+  transform: scale(1.5);
+  z-index: 10;
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+  border: 2px solid rgb(212, 212, 75);
+}
+
+/* Dim + blur background images */
+.gallery2:hover .image-card2:not(:hover) {
+  filter: brightness(0.3) blur(2px);
+  transform: scale(0.9);
+  opacity: 0.6;
+}
+
+/* Overlay text */
+.overlay2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: gold;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 12px 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.5s ease;
+  
+}
+
+.image-card2:hover .overlay2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .gallery2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .image-card2 {
+    width: 100%;
+    height: 230px;
+  }
+
+  .image-card2:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery2 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .image-card2 {
+    height: 200px;
+  }
+
+  .image-card2:hover {
+    transform: scale(1.02);
+  }
+}
+</style>
+
+<body>
+  <header class="product-hero">
+    <h1>Joint Sheet Veena</h1>
+    <p>Crafted with precision and devotion, this veena produces a rich, soulful sound.</p>
+  </header>
+
+  <section class="gallery">
+
+    <div class="image-card">
+      <img src="./pro2" alt="Joint Veena 2">
+      <div class="overlay">Eakandam sheet plain Veena</div>
+    </div>
+
+    <div class="image-card">
+      <img src="./pro3" alt="Joint Veena 3">
+      <div class="overlay">Full Carved Veena</div>
+    </div>
+
+    <div class="image-card">
+      <img src="./pro4" alt="Joint Veena 4">
+      <div class="overlay">Elegant Brown Veena</div>
+    </div>
+
+    <div class="image-card">
+      <img src="./p5" alt="Joint Veena 5">
+      <div class="overlay">Gloss Finish Veena</div>
+    </div>
+
+    <div class="image-card">
+      <img src="./p6" alt="Joint Veena 6">
+      <div class="overlay">Full deep carved Veena</div>
+    </div>
+
+    <div class="image-card">
+      <img src="./p7" alt="Joint Veena 7">
+      <div class="overlay">Royal Design Veena</div>
+    </div>
+  </section>
+
+  <section class="description">
+    <h2>Tambura</h2>
+    <p>
+      The Tambura is a long-necked lute used in Indian classical music.
+      It provides a continuous drone that supports the melodic elements of a performance.
+      Traditionally made from a single piece of wood, it features four to five strings
+      and is played with a plectrum.
+    </p>
+    <section class="gallery2">
+    <div class="image-card2">
+      <img src="./tam1" alt="Tambura 1">
+      <div class="overlay2">Royal Design Tambura</div>
+    </div>
+     <div class="image-card2">
+      <img src="./tam5" alt="Tambura 1">
+      <div class="overlay2">Royal Design Tambura</div>
+    </div>
+    <div class="image-card2">
+      <img src="./tam2" alt="Tambura 2">
+      <div class="overlay2">sheet art Tambura</div>
+    </div>
+    <div class="image-card2">
+      <img src="./tam2 details" alt="Tambura 3">
+      <div class="overlay2">Full carved Tambura</div>
+    </div>
+    <div class="image-card2">
+      <img src="./tam6" alt="Tambura 3">
+      <div class="overlay2">Full carved Tambura-dark brown</div>
+    </div>
+    <div class="image-card2">
+      <img src="./tam7" alt="Tambura 3">
+      <div class="overlay2">flower art</div>
+    </div>
+    </section>
+  </section>
+
+  <a href="index.html" class="product-cards"><button>← Back to Products</button></a>
+</body>

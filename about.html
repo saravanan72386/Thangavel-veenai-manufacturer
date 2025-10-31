@@ -1,0 +1,284 @@
+<section class="page-section">
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+      .page-section {
+        padding: 20px 20px;
+        text-align: center;
+      }
+      .page-section h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+      .page-section p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        font-style: italic;
+      }
+
+/* Hero Section */
+.hero {
+  background: url('./caio') center/cover no-repeat;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-text {
+  position: relative;
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeUp 1.5s ease;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  background: linear-gradient(
+    90deg,
+    #c9a72d 0%,
+    #f9e076 20%,
+    #ffffff 40%,
+    #f9e076 60%,
+    #c9a72d 80%,
+    #c9a72d 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shine 4s linear infinite;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+
+/* Blog Content */
+.blog-content {
+  max-width: 1000px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 0 20px;
+}
+
+.blog-card {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+}
+
+.blog-card img {
+  width: 40%;
+  border-radius: 15px;
+  border: 2px solid gold;
+}
+
+.card-text h2 {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.card-text p {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Animation Effects */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 2s ease forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px ;
+  background: rgba(175, 160, 74, 0.1);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .blog-card {
+    flex-direction: column;
+  }
+
+  .blog-card img {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+.about-preview button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.about-preview button:hover {
+  background-color: #0056b3;
+}
+
+    </style>
+    <section class="hero">
+    <div class="hero-text">
+      <h1>Celebrating 25 Years of Crafting the Divine Sound</h1>
+      <p>
+        Since 2000, Thangavel Veenai Manufacturer has been a beacon of
+        craftsmanship, tradition, and soulful artistry. Every Veenai we
+        create is more than an instrument — it’s a reflection of devotion,
+        patience, and timeless music.
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog-content">
+    <div class="blog-card fade-in">
+      <img src="./handcrafted veena" alt="Traditional Veenai" />
+      <div class="card-text">
+        <h2>Our Journey Through Time</h2>
+        <p>
+          From humble beginnings in a small workshop to becoming one of
+          South India’s most trusted Veenai makers, our 25-year journey is
+          built on quality, precision, and passion for the divine sound.
+        </p>
+      </div>
+    </div>
+
+    <div class="blog-card slide-up">
+      <img src="./traditional veena" alt="Handcrafted Veenai" />
+      <div class="card-text">
+        <h2>The Art of Perfection</h2>
+        <p>
+          Each Veenai is handcrafted using traditional methods passed down
+          through generations. Our artisans ensure every detail — from
+          the wood selection to the final polish — meets divine standards.
+        </p>
+      </div>
+    </div>
+
+    <div class="blog-card fade-in">
+      <img src="./full carving" alt="Musical Heritage" />
+      <div class="card-text">
+        <h2>Preserving Musical Heritage</h2>
+        <p>
+          Our mission is not just to sell instruments but to preserve a
+          cultural legacy. We are proud to share this journey with musicians,
+          learners, and art lovers around the world.
+        </p>
+      </div>
+    </div>
+
+    <div class="blog-card slide-up">
+      <img src="./tam5" alt="Handcrafted Veenai" />
+      <div class="card-text">
+        <h2>The Art of Tambura</h2>
+        <p>
+         The Tambura is a traditional Indian string instrument known for its deep, resonant drone that supports melody in classical music. It doesn’t play a tune itself but creates a continuous harmonic base, enhancing the beauty of the main performance. 
+         Carefully handcrafted from quality wood, each Tambura reflects centuries of musical tradition and craftsmanship, offering pure tonal depth and spiritual connection.
+        </p>
+      </div>
+    </div>
+  </section>
+ <a href="index.html" class="about-preview"><button>← Back to Home</button></a>
+  <footer>
+    <p>© 2025 Thangavel Veenai Manufacturer — Celebrating 25 Years of Tradition</p>
+  </footer>
+  </section>
