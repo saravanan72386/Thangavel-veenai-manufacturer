@@ -27,29 +27,21 @@
   <li><a href="#product">Product</a></li>
   <li><a href="#services">Services</a></li>
    <li><a href="#reviews">Reviews</a></li>
-  <li><a href="#location">Location</a></li>
+  <li><a href="#Location">Location</a></li>
 </ul>
   </header>
   
   <!-- 🟢 JavaScript for menu toggle -->
   <script>
-    const menuIcon = document.getElementById('menu-icon');
-    const navLinks = document.getElementById('navlinks');
-    const navItems = navLinks.querySelectorAll('a');
+  const menuIcon = document.getElementById("menu-icon");
+  const navLinks = document.getElementById("navlinks");
 
-    menuIcon.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      menuIcon.classList.toggle('open');
-    });
+  menuIcon.addEventListener("click", () => {
+    menuIcon.classList.toggle("open");
+    navLinks.classList.toggle("active");
+  });
+</script>
 
-    navItems.forEach(item => {
-      item.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        menuIcon.classList.remove('open');
-      });
-    });
-
-  </script>
 
   <!-- 🏠 Home Section -->
   <section id="home">
@@ -79,50 +71,49 @@
   </section>
 </section>
 
-  <section class="product" id="product">
-  <img src="./string image" alt="Musical Instrument" class="bg-image" />
+  <!-- 🎵 Product Section -->
+  <section class="product-page" id="product">
+    <h4>Our Products</h4>
+    <p>
+      Explore our exquisite range of instruments and enriching music craftsmanship.
+      From traditional to contemporary, we offer the tools and guidance to perfect your art.
+    </p>
+    <a href="joint-veena.html">
+      <button class="explore-btn">Explore the Veena's</button>
+    </a>
 
-  <div class="product-content">
-    <div class="text-overlay">
-      <h4>Our Product</h4>
-      <p>
-        Explore our exquisite range of instruments and enriching music craftsmanship.
-        From traditional to contemporary, we offer the tools and guidance to perfect your art.
-      </p>
-      <a href="joint-veena.html" class="product-cards"><button>Explore the Veena's</button></a>
-    </div>
-
-    <!-- 🟢 Product Cards Row -->
+    <!-- 🎸 Product Cards -->
     <div class="product-cards">
       <div class="card">
-        <img src="./v4.jpg" alt="Instrument Card" />
+        <img src="./v4.jpg" alt="Joint Sheet Veena" />
         <div class="card-overlay">
           <h4>Joint Sheet Veena</h4>
         </div>
       </div>
 
       <div class="card">
-        <img src="./v8.webp" alt="Instrument Card" />
+        <img src="./v8.webp" alt="Full Deep Eakandam Veena" />
         <div class="card-overlay">
           <h4>Full Deep Eakandam Veena</h4>
         </div>
       </div>
 
       <div class="card">
-        <img src="./v13" alt="Instrument Card" />
+        <img src="./v13" alt="Lite Carving Veena" />
         <div class="card-overlay">
           <h4>Lite Carving Veena</h4>
         </div>
       </div>
-       <div class="card">
-        <img src="./tam5" alt="Instrument Card" />
+
+      <div class="card">
+        <img src="./tam5" alt="Tambura" />
         <div class="card-overlay">
           <h4>Tambura</h4>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
 
   <!-- 🔵 Services Section -->
   <section class="service-section" id="services">
@@ -207,39 +198,40 @@
   </section>
   
 <!-- 🌍 Contact Section -->
-<section id="contact" class="contact-section">
+<section class="contact-section" id="Location">
   <div class="contact-container">
-    <!-- Google Map -->
+    <!-- 🗺️ Google Map -->
     <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps?q=Ellaiamman%20Kovil%20St&output=embed"
-        allowfullscreen
-        loading="lazy">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2821894451404!2d79.12895767961346!3d10.789685761925092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baac7603efc0449%3A0xe0023f3169e91e4e!2sEllaiamman%20Kovil%20St%2C%20Rajakrisnapuram%2C%20Thanjavur%2C%20Tamil%20Nadu%20613009%2C%20India!5e0!3m2!1sen!2sus!4v1762339811580!5m2!1sen!2sus" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
 
-    <!-- Contact Info -->
+    <!-- 📞 Contact Info -->
     <div class="contact-info">
       <h2>Contact <span>Us</span></h2>
       <div class="divider"></div>
 
-      <p><strong>Email:</strong></p>
-      <a href="mailto:thangavelsaravanan386@gmail.com">thangavelsaravanan386@gmail.com</a><br>
-      <a href="mailto:thangavelvenkatesh@gmail.com">thangavelvenkatesh@gmail.com</a>
+      <div class="contact-details">
+        <p><strong>Email:</strong></p>
+        <a href="mailto:thangavelsaravanan386@gmail.com">thangavelsaravanan386@gmail.com</a><br>
+        <a href="mailto:thangavelvenkatesh@gmail.com">thangavelvenkatesh@gmail.com</a>
 
-      <p><strong>Phone:</strong></p>
-      <a href="tel:+919360628386">+91 93606 28386</a> |
-      <a href="tel:+918072397918">80723 97918</a> |
-      <a href="tel:+918248918314">82489 18314</a>
-       <div class="social-icons">
-        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/919360628386" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <p><strong>Phone:</strong></p>
+        <a href="tel:+919360628386">+91 93606 28386</a> |
+        <a href="tel:+918072397918">80723 97918</a> |
+        <a href="tel:+918248918314">82489 18314</a>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/919360628386" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
   </div>
 </section>
+
 
 </body>
 </html>
