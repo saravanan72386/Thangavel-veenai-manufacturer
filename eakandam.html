@@ -8,26 +8,26 @@ body {
 }
 
 /* Hero Section */
-.product-hero {
+.product-hero2 {
   background: url('./bg-veena.jpg') center/cover no-repeat;
   padding: 100px 20px;
   position: relative;
 }
 
-.product-hero::after {
+.product-hero2::after {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
 }
 
-.product-hero h1,
-.product-hero p {
+.product-hero2 h1,
+.product-hero2 p {
   position: relative;
   z-index: 2;
 }
 
-.product-hero h1 {
+.product-hero2 h1 {
   font-size: 2.5rem;
   background: linear-gradient(90deg, gold, rgb(255, 248, 216), gold);
   -webkit-background-clip: text;
@@ -49,13 +49,13 @@ body {
   margin-top: -100px;
 }
 
-.image-card {
+.image-card2 {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
 }
 
-.image-card img {
+.image-card2 img {
   width: 100%;
   height: 300px;
   object-fit: cover;
@@ -63,13 +63,13 @@ body {
   transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-.image-card:hover img {
+.image-card2:hover img {
   transform: scale(1.05);
   filter: brightness(0.6);
 }
 
 /* Hover Overlay Name */
-.overlay {
+.overlay2 {
   position: absolute;
   bottom: -100%;
   width: 100%;
@@ -82,13 +82,13 @@ body {
   border-top: 2px solid gold;
 }
 
-.image-card:hover .overlay {
+.image-card2:hover .overlay2 {
   bottom: 0;
   opacity: 1;
 }
 
 /* Description */
-.description {
+.description2 {
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
@@ -99,7 +99,7 @@ body {
 }
 
 /* Back Button */
-.Back-btn {
+.Back-btn2 {
   display: inline-block;
   margin: 30px auto;
   padding: 10px 20px;
@@ -111,50 +111,46 @@ body {
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
 }
-.Back-btn:hover {
+.Back-btn2:hover {
   background: gold;
   color: black;
 }
 
 
-
 </style>
 
 <body>
-  <header class="product-hero">
-    <h1>Joint Sheet Veena</h1>
-    <p>Crafted with precision and devotion, this veena produces a rich, soulful sound.</p>
+  <header class="product-hero2">
+    <h1>Eakandam Veena</h1>
+    <p></p>
   </header>
 
   <section class="gallery">
 
-    <div class="image-card">
-      <img src="./pro2" alt="Joint Veena 2">
-      <div class="overlay">Eakandam sheet plain Veena</div>
+    <div class="image-card2">
+      <img src="./pro3" alt="Eakandam Veena 6">
+      <div class="overlay2">Eakandam Veena</div>
     </div>
 
-
-    <div class="image-card">
-      <img src="./pro4" alt="Joint Veena 4">
-      <div class="overlay">Elegant Brown Veena</div>
+    <div class="image-card2">
+      <img src="./v8.webp" alt="Eakandam Veena 7">
+      <div class="overlay2">Elegant Brown Veena</div>
     </div>
 
-    <div class="image-card">
-      <img src="./p5" alt="Joint Veena 5">
-      <div class="overlay">Gloss Finish Veena</div>
+    <div class="image-card2">
+      <img src="./v9.webp" alt="Eakandam Veena 8">
+      <div class="overlay2">Gloss Finish Veena</div>
     </div>
   </section>
 
-  <section class="description">
+  <section class="description2">
     <p>
-      The Joint Sheet Veena is a testament to the rich musical heritage of Thanjavur. 
-      Crafted with meticulous attention to detail, this instrument combines traditional 
-      craftsmanship with modern design elements. The veena features a joint sheet body, 
-      allowing for enhanced resonance and tonal quality. Each string is carefully tuned 
-      to produce a harmonious sound that captivates listeners. Whether you're a seasoned 
-      musician or a passionate beginner, the Joint Sheet Veena offers an unparalleled 
-      musical experience that resonates with the soul.
+        The Eakandam Veena is a traditional single-stringed instrument renowned for its deep, resonant sound. 
+        Crafted with precision and care, this veena embodies the rich musical heritage of Thanjavur. 
+        Its elegant design and superior craftsmanship make it a favorite among musicians seeking soulful melodies.
+
     </p>
   </section>
-  <button onclick="history.back()" class="Back-btn">← Back to Products</button>
+  <button onclick="history.back()" class="Back-btn2">← Back to Products</button>
+
 </body>

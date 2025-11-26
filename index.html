@@ -7,26 +7,22 @@
   <link rel="stylesheet" href="styles.css" />
   <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <!-- 🟡 Navbar -->
-  <header class="navbar">
-  <!-- Logo -->
-  <div class="logo">
-    <img src="./NEW LOGO" alt="TVM Veena Works Logo" />
-  </div>
+ <header class="navbar">
+  <div class="logo">Thangavel Veenai Manufacturer</div>
 
-  <!-- Hamburger Icon -->
-  <div class="menu-icon" id="menu-icon">
+  <div class="menu-icon" id="menuBtn">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
-  <!-- Nav Links -->
-  <ul class="navlinks" id="navlinks">
+  <ul class="nav-links" id="navLinks">
     <li><a href="#home" class="active">Home</a></li>
-    <li><a href="about.html">About</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#product">Product</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#reviews">Reviews</a></li>
@@ -35,190 +31,147 @@
 </header>
 
 <script>
-  const menuIcon = document.getElementById('menu-icon');
-  const navLinks = document.getElementById('navlinks');
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-  menuIcon.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuIcon.classList.toggle('open');
-  });
+menuBtn.onclick = () => {
+  navLinks.classList.toggle("show");
+};
 </script>
 
 
-
   <!-- 🏠 Home Section -->
-  <section id="home">
-    <div class="slider">
-      <div class="slide-track">
-        <div class="slide" style="background-image: url('./temple1');"></div>
-        <div class="slide" style="background-image: url('./temple2');"></div>
-        <div class="slide" style="background-image: url('./temple4');"></div>
-        <div class="slide" style="background-image: url('./temple3');"></div>
-        <div class="slide" style="background-image: url('./ganesha');"></div>
-        <div class="slide" style="background-image: url('./statue');"></div>
-        <div class="slide" style="background-image: url('./chakra');"></div>
-        <div class="slide" style="background-image: url('./red guitar');"></div>
-      </div>
+<section class="Home-page" id="home">
+    <div class="page2">
+      <div class="slide" style="background-image: url('./ganesha');"></div>
     </div>
-  </section>
-
-    <section class="product-hero">
-    <div class="words">
+    <div class="content">
       <h2>Thangavel Veenai Manufacturer</h2>
-    </div>
-    <div class="words2">
       <p>From the temple town of Thanjavur, this veenai echoes the spirit of Saraswati in every note.</p>
     </div>
-    <div class="box">
-      <a href="about.html" class="read-more-btn">Learn More</a>
+</section>
+
+<!-- Floating Social Icons -->
+<div class="floating-socials">
+  <a href="https://wa.me/919360628386" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://instagram.com/YOUR_PROFILE" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+</div>
+
+<!--About us-->
+<section class="about-section" id="about">
+  <div class="about-left">
+    <div class="img-box">
+      <img src="./new1" class="img-main">
     </div>
-  </section>
+  </div>
+
+  <div class="about-right">
+    <h2>About Us</h2>
+    <p>
+      With decades of craftsmanship rooted in tradition, Thangavel Veenai Manufacturer
+      brings the soul of Thanjavur's artistry into every instrument. Each veenai is
+      hand-crafted with precision, devotion, and a deep understanding of classical sound.
+    </p>
+
+    <a href="about.html" class="chill-btn">Read More</a>
+  </div>
 </section>
 
   <!-- 🎵 Product Section -->
-  <section class="product-page" id="product">
+<section class="product-page" id="product">
     <h4>Our Products</h4>
     <p>
       Explore our exquisite range of instruments and enriching music craftsmanship.
       From traditional to contemporary, we offer the tools and guidance to perfect your art.
     </p>
-    <a href="joint-veena.html">
-      <button class="explore-btn">Explore the Veena's</button>
-    </a>
 
     <!-- 🎸 Product Cards -->
-    <div class="product-cards">
-      <div class="card">
-        <img src="./v4.jpg" alt="Joint Sheet Veena" />
-        <div class="card-overlay">
-          <h4>Joint Sheet Veena</h4>
-        </div>
-      </div>
+    <div class="product-grid">
 
-      <div class="card">
-        <img src="./v8.webp" alt="Full Deep Eakandam Veena" />
-        <div class="card-overlay">
-          <h4>Full Deep Eakandam Veena</h4>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="./v13" alt="Lite Carving Veena" />
-        <div class="card-overlay">
-          <h4>Lite Carving Veena</h4>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="./tam5" alt="Tambura" />
-        <div class="card-overlay">
-          <h4>Tambura</h4>
-        </div>
+    <!-- CARD 1 -->
+    <div class="product-card">
+      <img src="./v4.jpg" alt="">
+      <div class="product-content">
+        <h3>Veena</h3>
+        <p>Elegance in strings, a classical instruments and musical masterpiece.</p>
+        <a href="joint-veena.html" class="view-btn">View More</a>
       </div>
     </div>
-  </section>
 
+    <!-- CARD 2 -->
+    <div class="product-card">
+      <img src="./v8.webp" alt="">
+      <div class="product-content">
+        <h3>Eakandam Veena</h3>
+        <p>Traditional single-stringed veena, known for its deep, resonant sound.</p>
+        <a href="eakandam.html" class="view-btn">View More</a>
+      </div>
+    </div>
 
-  <!-- 🔵 Services Section -->
-  <section class="services" id="services">
-  <h2>Our Services</h2>
-  <div class="services-container">
-    <div class="service-box">
-      <h3>Repolishing</h3>
-      <p>Give your old veena a new shine with our expert repolishing service.</p>
+    <!-- CARD 3 -->
+    <div class="product-card">
+      <img src="./tam5" alt="">
+      <div class="product-content">
+        <h3>Tambura</h3>
+        <p>Traditional drone instrument, providing a harmonic base for classical music.</p>
+        <a href="tambura.html" class="view-btn">View More</a>
+      </div>
     </div>
-    <div class="service-box highlight">
-      <h3>Repairing</h3>
-      <p>We restore damaged instruments with precision and care.</p>
+
+    <div class="product-card">
+      <img src="./stand" alt="">
+      <div class="product-content">
+        <h3>Accessories</h3>
+        <p>Premium accessories crafted to enhance your Veenai’s tone and performance.</p>
+        <a href="#" class="view-btn">View More</a>
+      </div>
     </div>
-    <div class="service-box">
-      <h3>Tuning</h3>
-      <p>Professional tuning for the perfect resonance and clarity.</p>
-    </div>
-    <div class="service-box">
-      <h3>Customization</h3>
-      <p>Create your dream veena with personalized wood, color, and design options.</p>
-    </div>
-    <div class="service-box">
-      <h3>String Replacement</h3>
-      <p>High-quality string fitting to maintain tone and durability.</p>
-    </div>
-    <div class="service-box">
-      <h3>Pickup Installation</h3>
-      <p>Enhance your instrument’s sound with professional pickup installation.</p>
-    </div>
+
   </div>
 </section>
 
-  <!-- ⭐ Reviews Section -->
-<section class="reviews-section" id="reviews">
-  <h2 class="review-title">Google Reviews</h2>
+<!-- SERVICES BOXES -->
+<section class="services-section" id="services">
+  <h2 class="service-title">Why Choose Us</h2>
+  <h1 class="service-heading">We Give You the Best Facilities for instruments</h1>
 
-  <div class="reviews-wrapper">
-    <button class="arrow left" onclick="scrollLeft()">&#10094;</button>
+  <div class="service-container">
 
-    <div class="reviews-container" id="reviewSlider">
-
-      <div class="card5">
-        <h5>⭐️⭐️⭐️⭐️⭐️</h5>
-        <p>“Very friendly and genuine people. You can completely trust them to buy your veena — their hospitality and service are excellent!”</p>
-        <span>- Sona Rani</span>
-      </div>
-
-      <div class="card5">
-        <h5>⭐️⭐️⭐️⭐️⭐️</h5>
-        <p>“I appreciate his dedication and hard work, such a great place to order Hindu goddess Saraswati in Thanjavur...”</p>
-        <span>- Arun Prasad</span>
-      </div>
-
-      <div class="card5">
-        <h5>⭐️⭐️⭐️⭐️⭐️</h5>
-        <p>“Gives best quality veena for affordable price.”</p>
-        <span>- Gopi Prithish</span>
-      </div>
-
-      <div class="card5">
-        <h5>⭐️⭐️⭐️⭐️</h5>
-        <p>“Excellent craftsmanship! The sound quality and finish are truly outstanding.”</p>
-        <span>- Rithik</span>
-      </div>
-
-      <div class="card5">
-        <h5>⭐️⭐️⭐️⭐️</h5>
-        <p>“Got my veena repaired here, and it sounds brand new! Highly recommended service.”</p>
-        <span>- Surendhar</span>
-      </div>
-
-      <div class="card5">
-        <h5>⭐️⭐️⭐️⭐️⭐️</h5>
-        <p>“Beautiful veena designs and very kind customer service. Loved the experience.”</p>
-        <span>- Maruthu</span>
-      </div>
-
-      <div class="card5">
-        <h5>⭐️⭐️⭐️⭐️</h5>
-        <p>“I purchased my first veena here — the tone is perfect and the design is elegant!”</p>
-        <span>- Swetha</span>
-      </div>
+    <!-- Card 1 -->
+    <div class="service-card">
+      <div class="service-icon">🎸</div>
+      <h3>Premium Veena Instruments</h3>
+      <p>
+        "Finest quality veenas crafted with precision & traditional expertise."
+      </p>
+      <a href="#" class="view-btn2">Book your Instruments</a>
     </div>
-    <button class="arrow right" onclick="scrollRight()">&#10095;</button>
+
+    <!-- Card 2 -->
+    <div class="service-card">
+      <div class="service-icon">🎼</div>
+      <h3>Real-Time Services</h3>
+      <p>
+        “Expert veena repair and repolishing to restore its sound quality, beauty, and performance.”
+      </p>
+      <a href="#" class="view-btn2">Book your Services</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="service-card">
+      <div class="service-icon">👩‍🏫</div>
+      <h3>Expert Staff</h3>
+      <p>
+        "Learn from skilled masters to grow confidently in your musical journey."
+      </p>
+      <a href="#" class="view-btn2">Book Complaints</a>
+    </div>
+
   </div>
 </section>
 
-<script>
-  const slider = document.getElementById('reviewSlider');
 
-  function scrollLeft() {
-    const scrollAmount = slider.clientWidth / 2; // Move one card (half screen)
-    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-  }
 
-  function scrollRight() {
-    const scrollAmount = slider.clientWidth / 2;
-    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  }
-</script>
-  
   <!-- 🪕 Contact Section -->
   <section class="contact-section" id="location">
     <div class="contact-container">
