@@ -1,6 +1,4 @@
 /* General Navbar Styles */
-/* Basic Setup */
- /* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -673,20 +671,7 @@ html {
   margin: 70px auto;
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
-  animation: goldenGlow 3s ease-in-out infinite alternate;
-}
-@keyframes goldenGlow {
-  0% {
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.1);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.3);
-  }
-  100% {
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
-  }
-}
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 
 /* Layout (No Quick Links) */
 .contact-container {
